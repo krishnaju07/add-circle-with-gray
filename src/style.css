@@ -1,0 +1,20 @@
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.circle {
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  border: 2px solid black;
+  border-radius: 50%;
+  list-style: none;
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.circle.gray {
+  background-color: gray; /* Change background color to gray when the circle is clicked */
+}
