@@ -10,9 +10,9 @@ export default function App() {
     setGray([...gray, false]); // Initialize all circles as not gray initially
   };
 
-  const increaseGray = (index) => {
+  const toggleGray = (index) => {
     const newGray = [...gray];
-    newGray[index] = true; // Set the clicked circle as gray
+    newGray[index] = !newGray[index]; // Toggle the gray state of the circle
     setGray(newGray);
   };
 
@@ -27,7 +27,7 @@ export default function App() {
             <li
               key={index}
               className={gray[index] ? 'circle gray' : 'circle'} // Apply gray class conditionally
-              onClick={() => increaseGray(index)} // Pass index to identify which circle is clicked
+              onClick={() => toggleGray(index)} // Pass index to identify which circle is clicked
             >
               {''}
             </li>
